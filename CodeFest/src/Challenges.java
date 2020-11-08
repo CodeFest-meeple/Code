@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.awt.image.RGBImageFilter;
 import java.util.*;
 public class Challenges {
@@ -60,15 +61,19 @@ public class Challenges {
     private static void ChallengeFive(){
         System.out.println("\n-----Challenge Five---\n");
 
-        int[] data = {255,0,0,255,127,0,255,255,0,0,255,0,0,0,255,46,43,5};
+        int[] data = {255,00,00,255,127,0,255,255,0,0,255,0,0,0,255,46,43,5};
+        int count = 0;
 
-        int R,G,B;
-        R = 0;
-        G = 0;
-        B = 0;
-        System.out.println(data.length/3);
-
-
+        for(int y : data){
+            count++;
+            if(count <= 3){
+                System.out.print(Integer.toHexString(y));
+            if(count ==3){
+                System.out.print(",");
+                count = 0;
+            }
+            }
+        }
     }
 
 
