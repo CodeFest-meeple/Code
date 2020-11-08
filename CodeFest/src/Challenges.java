@@ -5,6 +5,8 @@ public class Challenges {
     public static void main(String args[]){
         //Fibonacci sqaured sequence
         ChallengeOne();
+        //Degree angles in cartesian plane
+        ChallengeThree()
         //Ascii converstion to alphabet
         ChallengeFour();
         // RGB int values convert to Hex colour values
@@ -36,7 +38,27 @@ public class Challenges {
 
 
     private static void ChallengeThree(){
-
+    System.out.println("\n-----Challenge Three---\n");
+     int[] degrees = {0, 45, 90, 180}; 
+     int x = 0;
+     int y = 0;
+    	 for (int degree: degrees) {
+        	 if (degree == 0 || degree == 180) {
+        		 x=1;
+        		 y=0;
+        	 }
+        	 else if (degree == 90 || degree == 225) {
+        		 x=0;
+        		 y=1;
+        	 }
+        	 else {
+        		 x=1;
+        		 y=1;
+        	 }
+        	
+        	 System.out.println(degree + " " + x + " " + y + ", ");
+         }	 
+    }
     }
 
     //Ascii converstion to alphabet
