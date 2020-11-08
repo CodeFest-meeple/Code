@@ -113,10 +113,11 @@ public class Challenges {
 
 
     private static void ChallengeEight(){
-       int[] arr = {1, 2, 2};
+        int[] arr = {1, 2, 2};
       
         int x = 0;
         int y = 0;
+        System.out.println(arr[0] + " " + arr[1] + " " + arr[2] + ", ");
        	 for (int i = 0; i<3; i++) {
            	  arr[0]=(arr[1] - 1);
            	  arr[1]=(arr[1] + 1);
