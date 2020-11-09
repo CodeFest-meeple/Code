@@ -16,7 +16,9 @@ public class Challenges {
         ChallengeSeven();
         //second element to the power of the first element
         ChallengeEight();
-
+        
+        //comparing each digit and subtracting the smaller one from the larger one
+        ChallengeTen()
     }
     //Fibonacci sqaured sequence
     private static void ChallengeOne(){
@@ -132,7 +134,7 @@ public class Challenges {
 
     }
 
-
+//c= b^a
     private static void ChallengeEight(){
         System.out.println("\n-----Challenge Eight---\n");
 
@@ -146,5 +148,22 @@ public class Challenges {
             arr[2]=(int) (Math.pow(arr[1], arr[0]));
             System.out.print(arr[0] + "" + arr[1] + "" + arr[2] + ",");
         }
+    }
+    //comparing each digit and subtracting the smaller one from the larger one
+    private static void ChallengeTen(){
+        System.out.println("\n-----Challenge Ten---\n");
+        
+        int[] a = {8, 1, 3, 4, 7, 7, 2};
+        int[] b = {3, 7, 2, 6, 1, 3, 9};
+        ArrayList<Integer> c = new ArrayList<>();
+        for (int i = 0; i<a.length; i++) {
+        	if (a[i] >= b[i])
+        		c.add(a[i] - b[i]);
+        	
+        	else if (b[i] > a[i])
+        		c.add(b[i] - a[i]);
+        }
+        System.out.println(c);
+        
     }
 }
