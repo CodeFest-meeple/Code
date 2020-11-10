@@ -14,8 +14,8 @@ public class Challenges {
         ChallengeFour();
         // RGB int values convert to Hex colour values
         ChallengeFive();
-
-
+        //convert letters to operator
+        ChallengeSix()     
         //adds value within the same interval
         ChallengeSeven();
         //second element to the power of the first element
@@ -122,10 +122,33 @@ public class Challenges {
     }
 
 
-
-
+    //convert letters to operator
     private static void ChallengeSix(){
-
+      System.out.println("\n-----Challenge Six---\n");
+      String data = "PU 3 PU 4 AD 7 PU 5 SU 2 PU 3 AD ";
+      System.out.println(data);
+      String[] arr = data.split(" ");
+      String lastS = "";
+      for (String s : arr){
+    	  
+    	
+    	  if (s.equals("PU")) {
+    		  s = "+";
+    	  }
+    	  if (s.equals("SU")) {
+    		  s = "-";
+    	  }
+    	  if (s.equals("AD")) {
+    		  s = "=";
+    	  }
+    	  if (lastS.equals("="))
+        	  System.out.println(s);
+    	  else
+    	     System.out.print(s);
+    	 
+    	  lastS = s; 
+      } 
+      System.out.print(+5-2+3);
     }
 
 
