@@ -14,14 +14,13 @@ public class Challenges {
         ChallengeFour();
         // RGB int values convert to Hex colour values
         ChallengeFive();
-        //convert letters to operator
-        ChallengeSix()     
+
+        ChallengeSix();
         //adds value within the same interval
         ChallengeSeven();
         //second element to the power of the first element
         ChallengeEight();
-
-
+        //9
         //comparing each digit and subtracting the smaller one from the larger one
         ChallengeTen();
 
@@ -121,36 +120,38 @@ public class Challenges {
         }
     }
 
+        private static void ChallengeSix(){
 
-    //convert letters to operator
-    private static void ChallengeSix() {
-      System.out.println("\n-----Challenge Six---\n");
-      String data = "PU 3 PU 4 AD 7 PU 5 SU 2 PU 3 AD";
-      System.out.println(data + " ?");
-      String[] arr = data.split(" ");
-      ArrayList<Integer> numbers = new ArrayList<Integer>();
+                System.out.println("\n-----Challenge Six---\n");
+                String data = "PU 3 PU 4 AD 7 PU 5 SU 2 PU 3 AD";
+                String[] arr = data.split(" ");
+                ArrayList<Integer> numbers = new ArrayList<Integer>();
 
-      int n = 0;
-      int a = 0;
+                int n = 0;
+                int a = 0;
 
-      for (int i = 6; i < arr.length; i++){
-    	  String s = arr[i];
-    
-    	  switch(s){
-    		  case "PU":
-    			  a = Integer.parseInt(arr[i+1]);
-    			  numbers.add(a); break;
-    		  case "SU":
-    			  a = Integer.parseInt(arr[i+1]);
-    			  numbers.add(-a); break;
-    		  case "AD": 
-    			 for (int j = 0; j < numbers.size(); j++) {
-    			  n = n + numbers.get(j);
-    		     }  break;
-    		  } 	  	         	 
-      } 
- 	 System.out.println(n);
-    }
+                for (int i = 6; i < arr.length; i++){
+                    String s = arr[i];
+
+                    switch(s){
+                        case "PU":
+                            a = Integer.parseInt(arr[i+1]);
+                            numbers.add(a); break;
+                        case "SU":
+                            a = Integer.parseInt(arr[i+1]);
+                            numbers.add(-a); break;
+                        case "AD":
+                            for (int j = 0; j < numbers.size(); j++) {
+                                n = n + numbers.get(j);
+                            }  break;
+                    }
+                }
+            System.out.print(data+" "+n);
+
+            }
+
+
+
 
     private static void ChallengeSeven(){
         System.out.println("\n-----Challenge Seven---\n");
